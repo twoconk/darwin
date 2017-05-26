@@ -1,0 +1,236 @@
+grep: 字符类的语法是 [[:space:]],而非 [:space:]
+Darwin Streaming Server
+-----------------------
+I don't know your platform. I'll assume this is a Linux x86 platform.
+Please edit the BuildServer script & PlatformHeader.h to add your platform.
+Building for Linux.x86_64 with gcc
+Building CommonUtilitiesLib for Linux.x86_64 with gcc
+make: 没有什么可以做的为 `all'。
+Building QTFileLib internal for Linux.x86_64 with gcc
+make: 没有什么可以做的为 `all'。
+Building StreamingServer for Linux.x86_64 with gcc
+gcc -c -o Server.tproj/main.o  -D__linux__  -DDSS_USE_API_CALLBACKS -g -Wall -Wno-format-y2k -include PlatformHeader.h -O3 -I. -IQTFileLib -IOSMemoryLib -IRTSPClientLib -IAPIModules -IAPICommonCode -IAPIModules/OSMemory_Modules -IAPIModules/QTSSAccessLogModule -IAPIModules/QTSSFileModule -IAPIModules/QTSSFlowControlModule -IAPIModules/QTSSReflectorModule -IAPIModules/QTSSSvrControlModule -IAPIModules/QTSSWebDebugModule -IAPIModules/QTSSWebStatsModule -IAPIModules/QTSSAuthorizeModule -IAPIModules/QTSSPOSIXFileSysModule -IAPIModules/QTSSAdminModule -IAPIModules/QTSSMP3StreamingModule -IAPIModules/QTSSRTPFileModule -IAPIModules/QTSSAccessModule -IAPIModules/QTSSHttpFileModule -IQTFileTools/RTPFileGen.tproj -IAPIStubLib -ICommonUtilitiesLib -IRTCPUtilitiesLib -IHTTPUtilitiesLib -IRTPMetaInfoLib -IPrefsSourceLib -IServer.tproj Server.tproj/main.cpp
+In file included from CommonUtilitiesLib/ResizeableStringFormatter.h:39:0,
+                 from PrefsSourceLib/XMLParser.h:32,
+                 from PrefsSourceLib/XMLPrefsParser.h:39,
+                 from Server.tproj/RunServer.h:35,
+                 from Server.tproj/main.cpp:62:
+CommonUtilitiesLib/StringFormatter.h: 在成员函数‘void StringFormatter::PutFilePath(StrPtrLen*, StrPtrLen*)’中:
+CommonUtilitiesLib/StringFormatter.h:152:37: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+In file included from Server.tproj/QTSServerInterface.h:45:0,
+                 from Server.tproj/QTSServer.h:38,
+                 from Server.tproj/RunServer.h:38,
+                 from Server.tproj/main.cpp:62:
+Server.tproj/QTSSModule.h: 在成员函数‘QTSS_Error QTSSModule::CallDispatch(QTSS_Role, QTSS_RoleParamPtr)’中:
+Server.tproj/QTSSModule.h:102:106: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+Server.tproj/QTSSModule.h:102:106: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+Server.tproj/QTSSModule.h:111:105: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+Server.tproj/QTSSModule.h:111:105: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+In file included from CommonUtilitiesLib/TCPListenerSocket.h:41:0,
+                 from Server.tproj/QTSServerInterface.h:50,
+                 from Server.tproj/QTSServer.h:38,
+                 from Server.tproj/RunServer.h:38,
+                 from Server.tproj/main.cpp:62:
+CommonUtilitiesLib/IdleTask.h: 在构造函数‘IdleTask::IdleTask()’中:
+CommonUtilitiesLib/IdleTask.h:78:68: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+In file included from Server.tproj/QTSServerInterface.h:50:0,
+                 from Server.tproj/QTSServer.h:38,
+                 from Server.tproj/RunServer.h:38,
+                 from Server.tproj/main.cpp:62:
+CommonUtilitiesLib/TCPListenerSocket.h: 在构造函数‘TCPListenerSocket::TCPListenerSocket()’中:
+CommonUtilitiesLib/TCPListenerSocket.h:48:145: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+Server.tproj/main.cpp: 在函数‘int main(int, char**)’中:
+Server.tproj/main.cpp:228:19: 错误： ‘operator=’在‘act.sigaction::sa_mask = 0’中没有匹配
+Server.tproj/main.cpp:228:19: 附注： 备选是：
+/usr/include/x86_64-linux-gnu/bits/sigset.h:32:5: 附注： __sigset_t& __sigset_t::operator=(const __sigset_t&)
+/usr/include/x86_64-linux-gnu/bits/sigset.h:32:5: 附注：   no known conversion for argument 1 from ‘int’ to ‘const __sigset_t&’
+Server.tproj/main.cpp:230:37: 错误： 从类型‘void (*)(...)’到类型‘__sighandler_t {aka void (*)(int)}’的转换无效 [-fpermissive]
+Server.tproj/main.cpp:304:65: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+Server.tproj/main.cpp:305:58: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+Server.tproj/main.cpp:338:44: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+make: *** [Server.tproj/main.o] 错误 1
+Building RefMovieModule for Linux.x86_64 with gcc
+egcs -o QTSSRefMovieModule  ../OSMemory_Modules/OSMemory_Modules.o ../../APIStubLib/QTSS_Private.o ../../APICommonCode/QTSSModuleUtils.o ../../APICommonCode/SDPSourceInfo.o ../../APICommonCode/SourceInfo.o ../../RTPMetaInfoLib/RTPMetaInfoPacket.o QTSSRefMovieModule.o -D__linux__ -L../../CommonUtilitiesLib -lpthread -ldl -lm -lcrypt -shared  ../../CommonUtilitiesLib/libCommonUtilitiesLib.a ../../QTFileLib/libQTFileLib.a 
+make: egcs：命令未找到
+make: *** [QTSSRefMovieModule] 错误 127
+Building DemoAuthorizationModule for Linux.x86_64 with gcc
+egcs -o QTSSDemoAuthorizationModule  ../OSMemory_Modules/OSMemory_Modules.o ../../APIStubLib/QTSS_Private.o ../../APICommonCode/QTSSModuleUtils.o ../../APICommonCode/QTSSRollingLog.o ../../APICommonCode/SDPSourceInfo.o ../../APICommonCode/SourceInfo.o ../../RTPMetaInfoLib/RTPMetaInfoPacket.o QTSSDemoAuthorizationModule.o -D__linux__ -L../../CommonUtilitiesLib -L../../QTFileLib/ -lpthread -ldl -lm -lcrypt -shared  ../../CommonUtilitiesLib/libCommonUtilitiesLib.a  
+make: egcs：命令未找到
+make: *** [QTSSDemoAuthorizationModule] 错误 127
+Building RawFileModule for Linux.x86_64 with gcc
+egcs -o QTSSRawFileModule  ../OSMemory_Modules/OSMemory_Modules.o ../../APIStubLib/QTSS_Private.o ../../APICommonCode/QTSSModuleUtils.o ../../APICommonCode/QTSSRollingLog.o ../../APICommonCode/SDPSourceInfo.o ../../APICommonCode/SourceInfo.o ../../RTPMetaInfoLib/RTPMetaInfoPacket.o ../../SafeStdLib/InternalStdLib.o QTSSRawFileModule.o -D__linux__ -L../../CommonUtilitiesLib -lpthread -ldl -lm -lcrypt -shared  ../../CommonUtilitiesLib/libCommonUtilitiesLib.a ../../QTFileLib/libQTFileLib.a 
+make: egcs：命令未找到
+make: *** [QTSSRawFileModule] 错误 127
+Building SpamDefenseModule for Linux.x86_64 with gcc
+egcs -o QTSSSpamDefenseModule  ../OSMemory_Modules/OSMemory_Modules.o ../../APIStubLib/QTSS_Private.o ../../APICommonCode/QTSSModuleUtils.o ../../APICommonCode/QTSSRollingLog.o ../../APICommonCode/SDPSourceInfo.o ../../APICommonCode/SourceInfo.o ../../RTPMetaInfoLib/RTPMetaInfoPacket.o QTSSSpamDefenseModule.o -D__linux__ -L../../CommonUtilitiesLib -lpthread -ldl -lm -lcrypt -shared  ../../CommonUtilitiesLib/libCommonUtilitiesLib.a  
+make: egcs：命令未找到
+make: *** [QTSSSpamDefenseModule] 错误 127
+Building HomeDirectoryModule for Linux.x86_64 with gcc
+egcs -o QTSSHomeDirectoryModule  ../OSMemory_Modules/OSMemory_Modules.o ../../APIStubLib/QTSS_Private.o ../../APICommonCode/QTSSModuleUtils.o ../../APICommonCode/QTSSRollingLog.o ../../APICommonCode/SDPSourceInfo.o ../../APICommonCode/SourceInfo.o ../../RTPMetaInfoLib/RTPMetaInfoPacket.o ../../SafeStdLib/InternalStdLib.o DirectoryInfo.o QTSSHomeDirectoryModule.o -D__linux__ -L../../CommonUtilitiesLib -lpthread -ldl -lm -lcrypt -shared  ../../CommonUtilitiesLib/libCommonUtilitiesLib.a 
+make: egcs：命令未找到
+make: *** [QTSSHomeDirectoryModule] 错误 127
+Building StreamingProxy for Linux.x86_64 with gcc
+egcs -o StreamingProxy get_opt.o proxy.o util.o shared_udp.o proxy_unix.o  -D__linux__  -lpthread -ldl -lm -lcrypt
+make: egcs：命令未找到
+make: *** [StreamingProxy] 错误 127
+Building qtpasswd for Linux.x86_64 with gcc
+egcs -o qtpasswd  QTSSPasswd.o ../SafeStdLib/InternalStdLib.o ../OSMemoryLib/OSMemory.o -D__linux__ -L../CommonUtilitiesLib -lpthread -ldl -lm -lcrypt ../CommonUtilitiesLib/libCommonUtilitiesLib.a 
+make: egcs：命令未找到
+make: *** [qtpasswd] 错误 127
+Building PlaylistBroadcaster for Linux.x86_64 with gcc
+gcc -c -o PlaylistBroadcaster.o  -D__linux__ -include ../PlatformHeader.h -include ../revision.h -g -Wall -D__USE_MAX_PRINTF__ -O3 -I. -I.. -I../QTFileLib -I../OSMemoryLib -I../RTSPClientLib -I../APIStubLib -I../APICommonCode -I../CommonUtilitiesLib -I../RTPMetaInfoLib PlaylistBroadcaster.cpp
+In file included from ../CommonUtilitiesLib/TimeoutTask.h:44:0,
+                 from PlaylistBroadcaster.cpp:79:
+../CommonUtilitiesLib/IdleTask.h: 在构造函数‘IdleTask::IdleTask()’中:
+../CommonUtilitiesLib/IdleTask.h:78:68: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+In file included from PlaylistBroadcaster.cpp:79:0:
+../CommonUtilitiesLib/TimeoutTask.h: 在构造函数‘TimeoutTaskThread::TimeoutTaskThread()’中:
+../CommonUtilitiesLib/TimeoutTask.h:58:96: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+In file included from ../RTSPClientLib/RTSPClient.h:42:0,
+                 from BroadcasterSession.h:40,
+                 from PlaylistBroadcaster.cpp:80:
+../CommonUtilitiesLib/StringFormatter.h: 在成员函数‘void StringFormatter::PutFilePath(StrPtrLen*, StrPtrLen*)’中:
+../CommonUtilitiesLib/StringFormatter.h:152:37: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+PlaylistBroadcaster.cpp: 在全局域：
+PlaylistBroadcaster.cpp:156:48: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+PlaylistBroadcaster.cpp:157:49: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+PlaylistBroadcaster.cpp: 在函数‘int main(int, char**)’中:
+PlaylistBroadcaster.cpp:195:13: 警告： variable ‘needsTracker’ set but not used [-Wunused-but-set-variable]
+PlaylistBroadcaster.cpp:196:13: 警告： variable ‘needsLogfile’ set but not used [-Wunused-but-set-variable]
+PlaylistBroadcaster.cpp: 在函数‘void PreFlightOrBroadcast(const char*, bool, bool, bool, bool, char*, bool, const char*)’中:
+PlaylistBroadcaster.cpp:690:25: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+PlaylistBroadcaster.cpp:685:13: 警告： variable ‘sdpFileCreated’ set but not used [-Wunused-but-set-variable]
+PlaylistBroadcaster.cpp: 在函数‘void RegisterEventHandlers()’中:
+PlaylistBroadcaster.cpp:2094:19: 错误： ‘operator=’在‘act.sigaction::sa_mask = 0’中没有匹配
+PlaylistBroadcaster.cpp:2094:19: 附注： 备选是：
+/usr/include/x86_64-linux-gnu/bits/sigset.h:32:5: 附注： __sigset_t& __sigset_t::operator=(const __sigset_t&)
+/usr/include/x86_64-linux-gnu/bits/sigset.h:32:5: 附注：   no known conversion for argument 1 from ‘int’ to ‘const __sigset_t&’
+PlaylistBroadcaster.cpp:2096:37: 错误： 从类型‘void (*)(...)’到类型‘__sighandler_t {aka void (*)(int)}’的转换无效 [-fpermissive]
+PlaylistBroadcaster.cpp: 在函数‘int main(int, char**)’中:
+PlaylistBroadcaster.cpp:343:51: 警告： 忽略声明有 warn_unused_result 属性的‘FILE* freopen(const char*, const char*, FILE*)’的返回值 [-Wunused-result]
+PlaylistBroadcaster.cpp:345:47: 警告： 忽略声明有 warn_unused_result 属性的‘FILE* freopen(const char*, const char*, FILE*)’的返回值 [-Wunused-result]
+PlaylistBroadcaster.cpp: 在函数‘void PreFlightOrBroadcast(const char*, bool, bool, bool, bool, char*, bool, const char*)’中:
+PlaylistBroadcaster.cpp:860:52: 警告： 忽略声明有 warn_unused_result 属性的‘FILE* freopen(const char*, const char*, FILE*)’的返回值 [-Wunused-result]
+make: *** [PlaylistBroadcaster.o] 错误 1
+Building MP3Broadcaster for Linux.x86_64 with gcc
+gcc -c -o BroadcasterMain.o  -D__linux__ -include ../PlatformHeader.h -include ../revision.h -g -Wall -D__USE_MAX_PRINTF__ -O3  -I. -I.. -I../QTFileLib -I../OSMemoryLib -I../APIStubLib -I../APICommonCode -I../CommonUtilitiesLib -I../PlaylistBroadcaster.tproj BroadcasterMain.cpp
+BroadcasterMain.cpp: 在函数‘void RegisterEventHandlers()’中:
+BroadcasterMain.cpp:224:19: 错误： ‘operator=’在‘act.sigaction::sa_mask = 0’中没有匹配
+BroadcasterMain.cpp:224:19: 附注： 备选是：
+/usr/include/x86_64-linux-gnu/bits/sigset.h:32:5: 附注： __sigset_t& __sigset_t::operator=(const __sigset_t&)
+/usr/include/x86_64-linux-gnu/bits/sigset.h:32:5: 附注：   no known conversion for argument 1 from ‘int’ to ‘const __sigset_t&’
+BroadcasterMain.cpp:226:37: 错误： 从类型‘void (*)(...)’到类型‘__sighandler_t {aka void (*)(int)}’的转换无效 [-fpermissive]
+BroadcasterMain.cpp: 在函数‘int main(int, char**)’中:
+BroadcasterMain.cpp:187:51: 警告： 忽略声明有 warn_unused_result 属性的‘FILE* freopen(const char*, const char*, FILE*)’的返回值 [-Wunused-result]
+BroadcasterMain.cpp:189:51: 警告： 忽略声明有 warn_unused_result 属性的‘FILE* freopen(const char*, const char*, FILE*)’的返回值 [-Wunused-result]
+make: *** [BroadcasterMain.o] 错误 1
+Building QTFileTools for Linux.x86_64 with gcc
+Building QTBroadcaster for Linux.x86_64 with gcc
+egcs -o QTBroadcaster  QTBroadcaster.o ../../RTPMetaInfoLib/RTPMetaInfoPacket.o -D__linux__ -L../../CommonUtilitiesLib -L../../QTFileLib -lpthread -ldl -lm -lcrypt -lCommonUtilitiesLib  -lQTFileExternalLib ../../CommonUtilitiesLib/libCommonUtilitiesLib.a  
+make: egcs：命令未找到
+make: *** [QTBroadcaster] 错误 127
+Building QTFileInfo for Linux.x86_64 with gcc
+egcs -o QTFileInfo  QTFileInfo.o ../../RTPMetaInfoLib/RTPMetaInfoPacket.o -D__linux__ -L../../CommonUtilitiesLib -L../../QTFileLib -lpthread -ldl -lm -lcrypt -lCommonUtilitiesLib  -lQTFileExternalLib ../../CommonUtilitiesLib/libCommonUtilitiesLib.a 
+make: egcs：命令未找到
+make: *** [QTFileInfo] 错误 127
+Building QTFileTest for Linux.x86_64 with gcc
+egcs -o QTFileTest  QTFileTest.o ../../SafeStdLib/InternalStdLib.o ../../RTPMetaInfoLib/RTPMetaInfoPacket.o -D__linux__ -L../../CommonUtilitiesLib -L../../QTFileLib -lpthread -ldl -lm -lcrypt -lCommonUtilitiesLib  -lQTFileExternalLib ../../CommonUtilitiesLib/libCommonUtilitiesLib.a ../../QTFileLib/libQTFileExternalLib.a 
+make: egcs：命令未找到
+make: *** [QTFileTest] 错误 127
+Building QTRTPFileTest for Linux.x86_64 with gcc
+egcs -o QTRTPFileTest  QTRTPFileTest.o ../../SafeStdLib/InternalStdLib.o ../../RTPMetaInfoLib/RTPMetaInfoPacket.o -D__linux__ -L../../CommonUtilitiesLib -L../../QTFileLib -lpthread -ldl -lm -lcrypt -lCommonUtilitiesLib  -lQTFileExternalLib ../../CommonUtilitiesLib/libCommonUtilitiesLib.a ../../QTFileLib/libQTFileExternalLib.a 
+make: egcs：命令未找到
+make: *** [QTRTPFileTest] 错误 127
+Building QTRTPGen for Linux.x86_64 with gcc
+egcs -o QTRTPGen  QTRTPGen.o ../../SafeStdLib/InternalStdLib.o ../../RTPMetaInfoLib/RTPMetaInfoPacket.o -D__linux__ -L../../CommonUtilitiesLib -L../../QTFileLib -lpthread -ldl -lm -lcrypt -lCommonUtilitiesLib  -lQTFileExternalLib ../../CommonUtilitiesLib/libCommonUtilitiesLib.a ../../QTFileLib/libQTFileExternalLib.a 
+make: egcs：命令未找到
+make: *** [QTRTPGen] 错误 127
+Building QTSDPGen for Linux.x86_64 with gcc
+egcs -o QTSDPGen  QTSDPGen.o ../../SafeStdLib/InternalStdLib.o ../../RTPMetaInfoLib/RTPMetaInfoPacket.o -D__linux__ -L../../CommonUtilitiesLib -L../../QTFileLib -lpthread -ldl -lm -lcrypt -lCommonUtilitiesLib  -lQTFileExternalLib ../../CommonUtilitiesLib/libCommonUtilitiesLib.a ../../QTFileLib/libQTFileExternalLib.a 
+make: egcs：命令未找到
+make: *** [QTSDPGen] 错误 127
+Building QTSampleLister for Linux.x86_64 with gcc
+egcs -o QTSampleLister  QTSampleLister.o ../../SafeStdLib/InternalStdLib.o ../../RTPMetaInfoLib/RTPMetaInfoPacket.o -D__linux__ -L../../CommonUtilitiesLib -L../../QTFileLib -lpthread -ldl -lm -lcrypt -lCommonUtilitiesLib  -lQTFileExternalLib ../../CommonUtilitiesLib/libCommonUtilitiesLib.a ../../QTFileLib/libQTFileExternalLib.a 
+make: egcs：命令未找到
+make: *** [QTSampleLister] 错误 127
+Building QTTrackInfo for Linux.x86_64 with gcc
+egcs -o QTTrackInfo  QTTrackInfo.o ../../SafeStdLib/InternalStdLib.o ../../RTPMetaInfoLib/RTPMetaInfoPacket.o -D__linux__ -L../../CommonUtilitiesLib -L../../QTFileLib -lpthread -ldl -lm -lcrypt -lCommonUtilitiesLib  -lQTFileExternalLib ../../CommonUtilitiesLib/libCommonUtilitiesLib.a ../../QTFileLib/libQTFileExternalLib.a 
+make: egcs：命令未找到
+make: *** [QTTrackInfo] 错误 127
+Building StreamingLoadTool for Linux.x86_64 with gcc
+gcc -c -o StreamingLoadTool.o  -D__linux__ -include ../PlatformHeader.h -g -Wall -O3 -I. -I.. -I../OSMemoryLib -I../RTSPClientLib -I../RTCPUtilitiesLib -I../APICommonCode -I../CommonUtilitiesLib -I../PrefsSourceLib -I../APIStubLib -I../RTPMetaInfoLib StreamingLoadTool.cpp
+In file included from ../CommonUtilitiesLib/TimeoutTask.h:44:0,
+                 from ../RTSPClientLib/ClientSession.h:35,
+                 from StreamingLoadTool.cpp:51:
+../CommonUtilitiesLib/IdleTask.h: 在构造函数‘IdleTask::IdleTask()’中:
+../CommonUtilitiesLib/IdleTask.h:78:68: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+In file included from ../RTSPClientLib/ClientSession.h:35:0,
+                 from StreamingLoadTool.cpp:51:
+../CommonUtilitiesLib/TimeoutTask.h: 在构造函数‘TimeoutTaskThread::TimeoutTaskThread()’中:
+../CommonUtilitiesLib/TimeoutTask.h:58:96: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+In file included from ../RTSPClientLib/RTSPClient.h:42:0,
+                 from ../RTSPClientLib/ClientSession.h:38,
+                 from StreamingLoadTool.cpp:51:
+../CommonUtilitiesLib/StringFormatter.h: 在成员函数‘void StringFormatter::PutFilePath(StrPtrLen*, StrPtrLen*)’中:
+../CommonUtilitiesLib/StringFormatter.h:152:37: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+In file included from ../RTSPClientLib/ClientSession.h:42:0,
+                 from StreamingLoadTool.cpp:51:
+../RTSPClientLib/PlayerSimulator.h: 在成员函数‘UInt32 PlayerSimulator::GetPlayoutDelay(UInt32)’中:
+../RTSPClientLib/PlayerSimulator.h:222:12: 警告： 大整数隐式截断为无符号类型 [-Woverflow]
+../RTSPClientLib/PlayerSimulator.h: 在成员函数‘UInt32 PlayerSimulator::GetBufferingDelay(UInt32)’中:
+../RTSPClientLib/PlayerSimulator.h:235:12: 警告： 大整数隐式截断为无符号类型 [-Woverflow]
+In file included from StreamingLoadTool.cpp:51:0:
+../RTSPClientLib/ClientSession.h: 在成员函数‘UInt32 ClientSession::TrackID2TrackIndex(UInt32)’中:
+../RTSPClientLib/ClientSession.h:186:11: 警告： 大整数隐式截断为无符号类型 [-Woverflow]
+../RTSPClientLib/ClientSession.h: 在构造函数‘ClientSession::TrackStats::TrackStats()’中:
+../RTSPClientLib/ClientSession.h:270:117: 警告： 大整数隐式截断为无符号类型 [-Woverflow]
+StreamingLoadTool.cpp: 在函数‘int main(int, char**)’中:
+StreamingLoadTool.cpp:147:19: 错误： ‘operator=’在‘act.sigaction::sa_mask = 0’中没有匹配
+StreamingLoadTool.cpp:147:19: 附注： 备选是：
+/usr/include/x86_64-linux-gnu/bits/sigset.h:32:5: 附注： __sigset_t& __sigset_t::operator=(const __sigset_t&)
+/usr/include/x86_64-linux-gnu/bits/sigset.h:32:5: 附注：   no known conversion for argument 1 from ‘int’ to ‘const __sigset_t&’
+StreamingLoadTool.cpp:149:37: 错误： 从类型‘void (*)(...)’到类型‘__sighandler_t {aka void (*)(int)}’的转换无效 [-fpermissive]
+StreamingLoadTool.cpp:175:25: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+StreamingLoadTool.cpp:188:18: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+StreamingLoadTool.cpp:838:5: 警告： 格式 ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 2 has type ‘UInt64 {aka long unsigned int}’ [-Wformat]
+StreamingLoadTool.cpp:838:5: 警告： 格式 ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘UInt64 {aka long unsigned int}’ [-Wformat]
+StreamingLoadTool.cpp:838:5: 警告： 格式 ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘UInt64 {aka long unsigned int}’ [-Wformat]
+StreamingLoadTool.cpp:838:5: 警告： 格式 ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 5 has type ‘UInt64 {aka long unsigned int}’ [-Wformat]
+StreamingLoadTool.cpp:838:5: 警告： 格式 ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 6 has type ‘UInt64 {aka long unsigned int}’ [-Wformat]
+StreamingLoadTool.cpp:838:5: 警告： 格式 ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 7 has type ‘UInt64 {aka long unsigned int}’ [-Wformat]
+StreamingLoadTool.cpp:850:5: 警告： 格式 ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 2 has type ‘UInt64 {aka long unsigned int}’ [-Wformat]
+StreamingLoadTool.cpp:850:5: 警告： 格式 ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘UInt64 {aka long unsigned int}’ [-Wformat]
+StreamingLoadTool.cpp:850:5: 警告： 格式 ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘UInt64 {aka long unsigned int}’ [-Wformat]
+StreamingLoadTool.cpp:850:5: 警告： 格式 ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 5 has type ‘UInt64 {aka long unsigned int}’ [-Wformat]
+StreamingLoadTool.cpp: 在函数‘void CheckForStreamingLoadToolDotMov(SVector<unsigned int>&, SVector<char*>&, UInt16, SVector<char*>&, SVector<char*>&, UInt32)’中:
+StreamingLoadTool.cpp:923:29: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+StreamingLoadTool.cpp:925:44: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+StreamingLoadTool.cpp: 在函数‘void DoDNSLookup(SVector<char*>&, SVector<unsigned int>&)’中:
+StreamingLoadTool.cpp:1002:69: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+StreamingLoadTool.cpp:1002:69: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+StreamingLoadTool.cpp: 在函数‘char* GetClientTypeDescription(ClientSession::ClientType)’中:
+StreamingLoadTool.cpp:1032:28: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+StreamingLoadTool.cpp:1033:28: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+StreamingLoadTool.cpp:1034:29: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+StreamingLoadTool.cpp:1035:37: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+StreamingLoadTool.cpp:1036:36: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+StreamingLoadTool.cpp: 在函数‘char* GetDeathReasonDescription(UInt32)’中:
+StreamingLoadTool.cpp:1057:37: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+StreamingLoadTool.cpp:1058:39: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+StreamingLoadTool.cpp:1059:38: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+StreamingLoadTool.cpp:1060:31: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+StreamingLoadTool.cpp:1061:40: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+StreamingLoadTool.cpp:1062:41: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+StreamingLoadTool.cpp:1063:41: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+StreamingLoadTool.cpp: 在函数‘char* GetPayloadDescription(QTSS_RTPPayloadType)’中:
+StreamingLoadTool.cpp:1088:24: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+StreamingLoadTool.cpp:1089:24: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+StreamingLoadTool.cpp:1090:26: 警告： 不建议使用从字符串常量到‘char*’的转换 [-Wwrite-strings]
+In file included from ../RTSPClientLib/ClientSession.h:37:0,
+                 from StreamingLoadTool.cpp:51:
+../CommonUtilitiesLib/SVector.h: 在成员函数‘void SVector<T>::resize(UInt32, const T&) [with T = RTSPClient::SSRCMapElem, UInt32 = unsigned int]’中:
+../CommonUtilitiesLib/SVector.h:167:27：自‘void SVector<T>::clear() [with T = RTSPClient::SSRCMapElem]’实例化
+../CommonUtilitiesLib/SVector.h:59:4：自‘SVector<T>::~SVector() [with T = RTSPClient::SSRCMapElem]’实例化
+../RTSPClientLib/RTSPClient.h:219:7：从此处实例化
+../CommonUtilitiesLib/SVector.h:167:27: 警告： 大整数隐式截断为无符号类型 [-Woverflow]
+make: *** [StreamingLoadTool.o] 错误 1

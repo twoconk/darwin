@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <Device name="ipC1" url="rtsp://11.12.112.216:554/xinwen.mp4" ip="11.12.112.216" port="554" user="" pwd=""></Device>
+    <Device name="ipC2" url="rtsp://11.12.112.216:554/live/sample_300kbit.mp4" ip="11.12.112.216" port="554" user="" pwd=""></Device> 
+</root>
+

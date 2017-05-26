@@ -1,0 +1,117 @@
+---------------zhangfl  Test---------------------
+INFO: Module Loaded...QTSSRefMovieModule [dynamic]
+INFO: Module Loaded...QTSSHomeDirectoryModule [dynamic]
+INFO: Module Loaded...QTSSFileModule [static]
+INFO: Module Loaded...QTSSReflectorModule [static]
+----------- ----------- QTSSReflectorModuleDisPathch          000  QTSS_Register_Role----- 
+INFO: Module Loaded...QTSSRelayModule [static]
+INFO: Module Loaded...QTSSAccessLogModule [static]
+INFO: Module Loaded...QTSSFlowControlModule [static]
+INFO: Module Loaded...QTSSPosixFileSysModule [static]
+INFO: Module Loaded...QTSSAdminModule [static]
+INFO: Module Loaded...QTSSMP3StreamingModule [static]
+INFO: Module Loaded...QTSSAccessModule [static]
+----------- ----------- QTSSReflectorModuleDisPathch          111  QTSS_Initialize_Role----- 
+Streaming Server done starting up
+---------rtp data received.---------rtp data received.----------- ----------- QTSSReflectorModuleDisPathch          333  QTSS_RTSPRoute_Role: RedirectBroadcast ----- 
+----------- ----------- QTSSReflectorModuleDisPathch          777  QTSS_RTSPAuthorize_Role----- 
+----------- ----------- QTSSReflectorModuleDisPathcha       444   QTSS_RTSPPreProcessor_Role: ProcessRTSPRequest----- 
+----------- ii---------- ProcessRTSPRequest come in  ----- 
+-------------------- HHHHHHHHHHHHHHHHH  theMethod=6   ----- 
+QTSSReflectorModule:DoAnnounce
+----------- ----------- QTSSReflectorModuleDisPathcha       444   QTSS_RTSPPreProcessor_Role: ProcessRTSPRequest----- 
+----------- ii---------- ProcessRTSPRequest come in  ----- 
+-------------------- HHHHHHHHHHHHHHHHH  theMethod=6   ----- 
+QTSSReflectorModule:DoAnnounce
+---------rtp data received.----------- ----------- QTSSReflectorModuleDisPathch          333  QTSS_RTSPRoute_Role: RedirectBroadcast ----- 
+----------- ----------- QTSSReflectorModuleDisPathch          777  QTSS_RTSPAuthorize_Role----- 
+----------- ----------- QTSSReflectorModuleDisPathcha       444   QTSS_RTSPPreProcessor_Role: ProcessRTSPRequest----- 
+----------- ii---------- ProcessRTSPRequest come in  ----- 
+-------------------- HHHHHHHHHHHHHHHHH  theMethod=1   ----- 
+QTSSReflectorModule.cpp:DoSetup ,  isPush 00 ----------------
+ -------------FindOrCreateSession ,  theSessionRef == NULL , inPath =/usr/local/movies/top.sdp---------------- 
+--------------------- FindOrCreateSession, theFileData.Len=492 
+
+
+---------------  x = 0 , theStreamIDPtr =  
+---------------ReflectorSession::SetupReflectorSession,  theStreamRef == NULL 
+--------- ReflectorStream::BindSockets,  isMulticastDest=0 
+----------------- fSenderQueue.Length() = 1
+----------------- fSenderQueue.Length() = 1
+-------------ReflectorStream,   theSourceID.Ptr = 
+---------------  x = 1 , theStreamIDPtr =  
+---------------ReflectorSession::SetupReflectorSession,  theStreamRef == NULL 
+--------- ReflectorStream::BindSockets,  isMulticastDest=0 
+----------------- fSenderQueue.Length() = 1
+----------------- fSenderQueue.Length() = 1
+-------------ReflectorStream,   theSourceID.Ptr = 
+--- QTSSReflectorModule.cpp:DoSetup is push setup
+--- QTSSReflectorModule:DoSetup   theReceiveBroadcastStreamPort = 6972
+---------rtp data received.----------- ----------- QTSSReflectorModuleDisPathch          333  QTSS_RTSPRoute_Role: RedirectBroadcast ----- 
+----------- ----------- QTSSReflectorModuleDisPathch          777  QTSS_RTSPAuthorize_Role----- 
+----------- ----------- QTSSReflectorModuleDisPathcha       444   QTSS_RTSPPreProcessor_Role: ProcessRTSPRequest----- 
+----------- ii---------- ProcessRTSPRequest come in  ----- 
+-------------------- HHHHHHHHHHHHHHHHH  theMethod=1   ----- 
+QTSSReflectorModule.cpp:DoSetup ,  isPush 00 ----------------
+--------------------- FindOrCreateSession, theSessionRef != NULL  come in---------------- 
+---------------  x = 0 , theStreamIDPtr =  
+---------------ReflectorSession::SetupReflectorSession,  theStreamRef->GetObject() 
+---------------  x = 1 , theStreamIDPtr =  
+---------------ReflectorSession::SetupReflectorSession,  theStreamRef->GetObject() 
+--- QTSSReflectorModule.cpp:DoSetup is push setup
+--- QTSSReflectorModule:DoSetup   theReceiveBroadcastStreamPort = 6974
+---------rtp data received.----------- ----------- QTSSReflectorModuleDisPathch          333  QTSS_RTSPRoute_Role: RedirectBroadcast ----- 
+----------- ----------- QTSSReflectorModuleDisPathch          777  QTSS_RTSPAuthorize_Role----- 
+----------- ----------- QTSSReflectorModuleDisPathcha       444   QTSS_RTSPPreProcessor_Role: ProcessRTSPRequest----- 
+----------- ii---------- ProcessRTSPRequest come in  ----- 
+-------------------- HHHHHHHHHHHHHHHHH  theMethod=10   ----- 
+-------------------- MMMMMMM  theMethod=10   ----- 
+---------------------- DoPlay come in-------------------------
+----------------------DoPlay inSession == NULL 111111------------------
+---------------------- path:/usr/local/movies/top.sdp-------------------------
+---------rtp data received.---------rtp data received.----------- ----------- QTSSReflectorModuleDisPathch          333  QTSS_RTSPRoute_Role: RedirectBroadcast ----- 
+----------- ----------- QTSSReflectorModuleDisPathch          777  QTSS_RTSPAuthorize_Role----- 
+----------- ----------- QTSSReflectorModuleDisPathcha       444   QTSS_RTSPPreProcessor_Role: ProcessRTSPRequest----- 
+----------- ii---------- ProcessRTSPRequest come in  ----- 
+-------------------- HHHHHHHHHHHHHHHHH  theMethod=0   ----- 
+----------------------setup path:/usr/local/movies/top.sdp.sdp-------------------------
+--------------------- FindOrCreateSession, theSessionRef != NULL  come in---------------- 
+---------rtp data received.----------- ----------- QTSSReflectorModuleDisPathch          333  QTSS_RTSPRoute_Role: RedirectBroadcast ----- 
+----------- ----------- QTSSReflectorModuleDisPathch          777  QTSS_RTSPAuthorize_Role----- 
+----------- ----------- QTSSReflectorModuleDisPathcha       444   QTSS_RTSPPreProcessor_Role: ProcessRTSPRequest----- 
+----------- ii---------- ProcessRTSPRequest come in  ----- 
+-------------------- HHHHHHHHHHHHHHHHH  theMethod=1   ----- 
+--------------- QTSSReflectorModule.cpp:DoSetup ,  !isPush --------------
+----------------------setup path:/usr/local/movies/top.sdp.sdp-------------------------
+--------------------- FindOrCreateSession, theSessionRef != NULL  come in---------------- 
+---------------thePayloadName=H264/90000 , thePayloadType=1 , theTrackID=0 
+---------rtp data received.----------- ----------- QTSSReflectorModuleDisPathch          333  QTSS_RTSPRoute_Role: RedirectBroadcast ----- 
+----------- ----------- QTSSReflectorModuleDisPathch          777  QTSS_RTSPAuthorize_Role----- 
+----------- ----------- QTSSReflectorModuleDisPathcha       444   QTSS_RTSPPreProcessor_Role: ProcessRTSPRequest----- 
+----------- ii---------- ProcessRTSPRequest come in  ----- 
+-------------------- HHHHHHHHHHHHHHHHH  theMethod=1   ----- 
+QTSSReflectorModule.cpp:DoSetup ,  Have a  RTPSessionOutput ----------------
+---------------thePayloadName=MPEG4-GENERIC/48000/2 , thePayloadType=2 , theTrackID=1 
+---------rtp data received.----------- ----------- QTSSReflectorModuleDisPathch          333  QTSS_RTSPRoute_Role: RedirectBroadcast ----- 
+----------- ----------- QTSSReflectorModuleDisPathch          777  QTSS_RTSPAuthorize_Role----- 
+----------- ----------- QTSSReflectorModuleDisPathcha       444   QTSS_RTSPPreProcessor_Role: ProcessRTSPRequest----- 
+----------- ii---------- ProcessRTSPRequest come in  ----- 
+-------------------- HHHHHHHHHHHHHHHHH  theMethod=3   ----- 
+----------- NNNNNNNNNNN ProcessRTSPRequest, theMethod=3   ----- 
+---------------------- DoPlay come in-------------------------
+-------------------- DoPlay  rtpInfoEnabled=0   ----- 
+-------------------- DoPlay  QTSS_Play  rtpInfoEnabled = 0----- 
+---------rtp data received.----------- ----------- QTSSReflectorModuleDisPathch          333  QTSS_RTSPRoute_Role: RedirectBroadcast ----- 
+----------- ----------- QTSSReflectorModuleDisPathch          777  QTSS_RTSPAuthorize_Role----- 
+----------- ----------- QTSSReflectorModuleDisPathcha       444   QTSS_RTSPPreProcessor_Role: ProcessRTSPRequest----- 
+----------- ii---------- ProcessRTSPRequest come in  ----- 
+-------------------- HHHHHHHHHHHHHHHHH  theMethod=2   ----- 
+----------- NNNNNNNNNNN ProcessRTSPRequest, theMethod=2   ----- 
+----------- ----------- QTSSReflectorModuleDisPathch          555  QTSS_ClientSessionClosing_Role:DestroySession----- 
+---------rtp data received.----------- ----------- QTSSReflectorModuleDisPathch          333  QTSS_RTSPRoute_Role: RedirectBroadcast ----- 
+----------- ----------- QTSSReflectorModuleDisPathch          777  QTSS_RTSPAuthorize_Role----- 
+----------- ----------- QTSSReflectorModuleDisPathcha       444   QTSS_RTSPPreProcessor_Role: ProcessRTSPRequest----- 
+----------- ii---------- ProcessRTSPRequest come in  ----- 
+-------------------- HHHHHHHHHHHHHHHHH  theMethod=2   ----- 
+----------QTSS_FileModule QTSS_RTSPRequest --------------
+----------- ----------- QTSSReflectorModuleDisPathch          555  QTSS_ClientSessionClosing_Role:DestroySession----- 

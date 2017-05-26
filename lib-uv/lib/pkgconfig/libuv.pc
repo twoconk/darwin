@@ -1,0 +1,11 @@
+prefix=/usr/lyz/ndk/lib_uv/lib
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libuv
+Version: 1.10.0
+Description: multi-platform support library with a focus on asynchronous I/O.
+
+Libs: -L${libdir} -luv -lrt -lpthread -lnsl -ldl 
+Cflags: -I${includedir}
